@@ -41,7 +41,7 @@ namespace DynamicProxy
                             options.Retry = InfrastructuresHttpModule.DefaultRetry;
                             options.Kind = ProxyKind.Socks5;
                         })
-                    }, new List<IPostConfigureOptions<HttpProxyOptions>>())), new NullLoggerFactory());
+                    }, new List<IPostConfigureOptions<HttpProxyOptions>>())), new ConsoleLoggerFactory());
 
             var source = proxySourceProvider.Create();
             using var channel = GrpcChannel.ForAddress("http://localhost:54672");
@@ -49,6 +49,7 @@ namespace DynamicProxy
 
             while (true)
             {
+                Console.WriteLine($"updating proxy ...");
                 var task = Task.Delay(TimeSpan.FromMinutes(14));
                 var list = new List<ServerEndpoint>();
                 for (var i = 0; i < poolSize; i++)
@@ -88,7 +89,10 @@ namespace DynamicProxy
                     }
                 };
 
+                Console.Write($"Sending request ... ");
                 _ = await client.AddOutboundAsync(request);
+                Console.WriteLine("Success");
+                Console.WriteLine($"wait for 14 minutes ...");
                 await task;
             }
         }
