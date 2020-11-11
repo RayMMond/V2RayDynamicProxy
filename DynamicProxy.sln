@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DynamicProxy", "DynamicProxy.csproj", "{AA937649-96EB-4872-8452-8E85996E5C11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YuXiang.Infrastructures.Http", "..\YuXiang.Ticket\infrastructures\YuXiang.Infrastructures.Http\YuXiang.Infrastructures.Http.csproj", "{0D75B5E3-37F8-47C7-8B9D-5A72B763F56C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA937649-96EB-4872-8452-8E85996E5C11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA937649-96EB-4872-8452-8E85996E5C11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA937649-96EB-4872-8452-8E85996E5C11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA937649-96EB-4872-8452-8E85996E5C11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D75B5E3-37F8-47C7-8B9D-5A72B763F56C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D75B5E3-37F8-47C7-8B9D-5A72B763F56C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D75B5E3-37F8-47C7-8B9D-5A72B763F56C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D75B5E3-37F8-47C7-8B9D-5A72B763F56C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
